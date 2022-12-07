@@ -125,9 +125,9 @@ function Home() {
             <VStack
               spacing='76px'
             >
-              <ProjectCard name='Redesigning Fandom' description='A brief description about responsive redesign' imgPath='/cs1300-portfolio/responsive-webpage.png' linkTo='/responsive-redesign'/>
+              <ProjectCard name='Redesigning Fandom' description='Creating a more user-friendly design for the Star Wars Fandom Wiki' imgPath='/cs1300-portfolio/responsive-webpage.png' linkTo='/responsive-redesign'/>
 
-              <ProjectCard name='Prototyping a Note-Taking App' description='A brief description about iterative design' imgPath='/cs1300-portfolio/iterative-design-screenshot.png' linkTo='/iterative-design'/>
+              <ProjectCard name='Prototyping a Note-Taking App' description='Innovating a framework to organize notes for visual thinkers' imgPath='/cs1300-portfolio/iterative-design-screenshot.png' linkTo='/iterative-design'/>
             </VStack>
           </VStack>
           <motion.div
@@ -153,7 +153,8 @@ function Home() {
             <VStack
               spacing='76px'
             >
-              <ProjectCard name='Ordering at Ten One Tea House' description='A brief description about personas and storyboarding' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/personas-storyboarding'/>
+              <ProjectCard name='Ten One Tea House Ordering' description='Understanding the Ten One Snackpass kiosk ordering experience through the eyes of its users' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/personas-storyboarding'/>
+              <ProjectCard name='Eye Tracking for a Bakery Website' description='Investigating the effects of various page layouts on user attention and impressions' imgPath='/cs1300-portfolio/heatmap1.png' linkTo='/eyetracking'/>
             </VStack>
           </VStack>
           <motion.div

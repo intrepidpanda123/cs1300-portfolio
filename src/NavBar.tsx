@@ -35,9 +35,14 @@ const TextLink = (props: TextLinkProps) => {
   const updateActive = () => {
     const section = document.getElementById(props.to)!;
     const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    if (((props.base && section) || (section && section.offsetTop < scroll + 108))
-        && props.priority >= props.currentActive) {
-      props.setCurrentActive(props.priority);
+    if (section) {
+      if (props.base) {
+        if (props.priority >= props.currentActive) {
+          props.setCurrentActive(props.priority);
+        }
+      } else if (scroll > 210 && section.offsetTop < scroll + 320 && props.priority >= props.currentActive) {
+        props.setCurrentActive(props.priority);
+      }
     }
   }
 
