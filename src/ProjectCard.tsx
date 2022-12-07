@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 const ProjectCard = (props: ProjectCardProps) => {
   return (
-    <Stack direction={['column', 'column', 'row']} spacing={['48px', '48px', '96px']} align='center'>
+    <Stack direction={['column', 'column', 'row']} spacing='36px' align='center'>
       <Flex
         width='480px'
         justifyContent='center'

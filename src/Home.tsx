@@ -22,7 +22,7 @@ function Home() {
       padding='128px 48px 80px'
     >
       <VStack
-        spacing='108px'
+        spacing='72px'
       >
         <HStack
           id='intro-section'
@@ -36,7 +36,7 @@ function Home() {
           />
           <VStack
             align='flex-start'
-            spacing='40px'
+            spacing='32px'
           >
             <VStack
               align='flex-start'
@@ -94,7 +94,7 @@ function Home() {
             Portfolio
           </Text>
           <VStack
-            spacing='128px'
+            spacing='76px'
           >
             <ProjectCard name='Redesigning Fandom' description='A brief description about responsive redesign' imgPath='/cs1300-portfolio/responsive-webpage.png' linkTo='/responsive-redesign'/>
 
@@ -107,7 +107,7 @@ function Home() {
             Research
           </Text>
           <VStack
-            spacing='128px'
+            spacing='76px'
           >
             <ProjectCard name='Ordering at Ten One Tea House' description='A brief description about personas and storyboarding' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/personas-storyboarding'/>
           </VStack>
