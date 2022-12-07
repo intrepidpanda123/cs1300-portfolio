@@ -35,7 +35,7 @@ function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.75 }}
+            transition={{ duration: 0.5 }}
           >
           <HStack
             id='intro-section'
@@ -106,7 +106,7 @@ function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.75 }}
+            transition={{ duration: 0.5 }}
             style={{ width: '100%' }}
           >
             <Divider borderColor='#AAAAAA'/>
@@ -116,7 +116,7 @@ function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.75 }}
+              transition={{ duration: 0.5 }}
             >
               <Text fontSize='3xl'>
                 Portfolio
@@ -134,7 +134,7 @@ function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.75 }}
+            transition={{ duration: 0.5 }}
             style={{ width: '100%' }}
           >
             <Divider borderColor='#AAAAAA'/>
@@ -144,7 +144,7 @@ function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.75 }}
+              transition={{ duration: 0.5 }}
             >
               <Text fontSize='3xl'>
                 Research
@@ -160,7 +160,7 @@ function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.75 }}
+            transition={{ duration: 0.5 }}
           >
             <Text pt='144px'>
               Copyright 2022 © Intrepid Panda

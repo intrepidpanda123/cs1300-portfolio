@@ -17,7 +17,7 @@ const ProjectCard = (props: ProjectCardProps) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 'some' }}
-      transition={{ duration: 0.75 }}
+      transition={{ duration: 0.5 }}
     >
       <Stack
         direction={['column', 'column', 'row']}
