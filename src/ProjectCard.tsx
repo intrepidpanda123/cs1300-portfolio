@@ -16,7 +16,7 @@ const ProjectCard = (props: ProjectCardProps) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 'some' }}
       transition={{ duration: 0.75 }}
     >
       <Stack

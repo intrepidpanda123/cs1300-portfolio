@@ -1,8 +1,9 @@
-import { ListItem, Heading, Image, OrderedList, Text, Box, UnorderedList } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { ListItem, Heading, Image, OrderedList, Text, Box, UnorderedList } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import '../index.css';
-import EmpathyMap from "./EmpathyMap";
-import Storyboard from "./Storyboard";
+import EmpathyMap from './EmpathyMap';
+import Storyboard from './Storyboard';
+import { motion } from 'framer-motion';
 
 const styles = {
   container: {
@@ -96,7 +97,13 @@ const PersonasAndStoryboarding = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      style={styles.container}
+    >
       <Heading style={styles.heading2xl} size='2xl'>
         Personas and Storyboarding
       </Heading>
@@ -130,7 +137,7 @@ const PersonasAndStoryboarding = () => {
           style={{...styles.image, maxWidth: 'min(800px, 100%)'}}
           />
         <Text style={styles.text}>
-          This screen allows users to customize their drinks. The extent of customization depends on the drink, with some drinks having more or fewer options than others. Each of the customization options also has its price attached to it. The total pre-tax price of the drink is displayed on the "Add to Cart" button. After adding the drinks they want to their cart, the user gives their phone number to receive order updates, and then proceeds to check out using the attached card reader.
+          This screen allows users to customize their drinks. The extent of customization depends on the drink, with some drinks having more or fewer options than others. Each of the customization options also has its price attached to it. The total pre-tax price of the drink is displayed on the 'Add to Cart' button. After adding the drinks they want to their cart, the user gives their phone number to receive order updates, and then proceeds to check out using the attached card reader.
         </Text>
       </div>
       <div style={styles.section}>
@@ -138,10 +145,10 @@ const PersonasAndStoryboarding = () => {
           Part 2. Recording Observations
         </Heading>
         <Text style={styles.text}>
-          The first user had some initial confusion with the difference between two of the "Popular" menu items, specifically between the "Brown Sugar Boba Milk Tea" and the "Brown Sugar Boba with Fresh Milk." He then picked one of them at random, quickly chose a customization option, and checked out. He adjusted the tip value from the default of 2 dollars to 0 dollars.
+          The first user had some initial confusion with the difference between two of the 'Popular' menu items, specifically between the 'Brown Sugar Boba Milk Tea' and the 'Brown Sugar Boba with Fresh Milk.' He then picked one of them at random, quickly chose a customization option, and checked out. He adjusted the tip value from the default of 2 dollars to 0 dollars.
         </Text>
         <Text style={styles.text}>
-          The second user I observed did not scroll around or explore the interface much. He picked a drink immediately from the "Popular" section of the menu, chose a customization option quickly, and checked out. He adjusted the tip value from the default of 2 dollars to 1 dollar.
+          The second user I observed did not scroll around or explore the interface much. He picked a drink immediately from the 'Popular' section of the menu, chose a customization option quickly, and checked out. He adjusted the tip value from the default of 2 dollars to 1 dollar.
         </Text>
         <Text style={styles.text}>
           The third user took the most time exploring the drink options compared to the others. He scrolled up and down several times, skipping and returning to sections, before settling upon a drink that he liked. He took a bit of time to read through the customization options before checking out. Like the first user, he chose to withhold a tip, while also expressing annoyance at the default value being set to 2 dollars.
@@ -178,13 +185,13 @@ const PersonasAndStoryboarding = () => {
         A couple of trends in their responses that stood out to me:
         <UnorderedList style={styles.list}>
           <Text as={ListItem}>
-            Several of the users expressed that they felt that some of the menu items could've used additional information. For example, one user that was very sensitive to caffeine complained that they couldn't tell which drinks had caffeine in them. Another user said they were curious about a drink that said "with flower," except they didn't know what kind of flower it was.
+            Several of the users expressed that they felt that some of the menu items could've used additional information. For example, one user that was very sensitive to caffeine complained that they couldn't tell which drinks had caffeine in them. Another user said they were curious about a drink that said 'with flower,' except they didn't know what kind of flower it was.
           </Text>
           <Text as={ListItem}>
             All of the users agreed that the menu did a relatively decent job at displaying the multitude of drink options that were available. However, they still agreed that the non-featured drinks on the menu were relatively hidden, due to having to scroll down to find them.
           </Text>
           <Text as={ListItem}>
-            One of the users picked their drink based off of what was "Popular" in the menu, along with the visual appeal of the drink. Another user explained that he always orders that specific drink on the menu, since it tastes the best to him.
+            One of the users picked their drink based off of what was 'Popular' in the menu, along with the visual appeal of the drink. Another user explained that he always orders that specific drink on the menu, since it tastes the best to him.
           </Text>
           <Text as={ListItem}>
             Another trend that I noticed was that of the two users that chose not to tip, both were unsatisfied that the interface had a default tip value set of 2 dollars. The third user felt inclined to tip baristas in general, but 1 dollar made more sense to them.
@@ -214,7 +221,7 @@ const PersonasAndStoryboarding = () => {
           Ryan really only is looking for one or two drinks on the menu; he doesn't particularly care about trying new drinks. As such, he wants an interface that makes it easy to find and customize the drink he's looking for. Ryan doesn't want to spend too long, so he prefers a streamlined interface that doesn't have too many extra steps.
         </Text>
         <Text style={styles.text}>
-          This persona represents some of the users of my chosen interface, specifically those that don't like to spend too much time figuring out what they want to order. During my observations, some users didn't explore much of the menu, but rather chose from the "Popular" section of the menu without much need for thought. When I interviewed them, they explained that they had a preferred drink that they always ordered, because they knew that it tasted good. They didn't feel the need to try out other drinks that could possibly be a waste of money if the drinks didn't taste good.
+          This persona represents some of the users of my chosen interface, specifically those that don't like to spend too much time figuring out what they want to order. During my observations, some users didn't explore much of the menu, but rather chose from the 'Popular' section of the menu without much need for thought. When I interviewed them, they explained that they had a preferred drink that they always ordered, because they knew that it tasted good. They didn't feel the need to try out other drinks that could possibly be a waste of money if the drinks didn't taste good.
         </Text>
         <Heading style={styles.headingLg} size='md'>
           Empathy Map 2: Newbie Nellie
@@ -243,7 +250,7 @@ const PersonasAndStoryboarding = () => {
         </Text>
         <Storyboard />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

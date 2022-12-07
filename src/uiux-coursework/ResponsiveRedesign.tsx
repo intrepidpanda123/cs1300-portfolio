@@ -1,5 +1,6 @@
-import { SimpleGrid, Heading, Image, Link, ListItem, Text, OrderedList } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { SimpleGrid, Heading, Image, Link, ListItem, Text, OrderedList } from '@chakra-ui/react';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const ResponsiveRedesign = () => {
   useEffect(() => {
@@ -41,7 +42,13 @@ const ResponsiveRedesign = () => {
   }
 
   return (
-    <div style={styles.container}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      style={styles.container}
+    >
       <Heading style={styles.heading2xl} size='2xl'> Responsive Redesign </Heading>
 
       <Text style={styles.text}>
@@ -212,7 +219,7 @@ const ResponsiveRedesign = () => {
         fit='scale-down'
         style={{...styles.image, maxWidth: 'min(100%, 800px)'}}
       />
-    </div>
+    </motion.div>
   )
 }
 
