@@ -28,6 +28,7 @@ const TextLink = (props: TextLinkProps) => {
     if (section && section.offsetTop) {
       window.scrollTo({ top: section.offsetTop - 100, left: 0, behavior: 'smooth' });
     }
+    window.history.replaceState({}, document.title)
   }
 
   const updateActive = () => {

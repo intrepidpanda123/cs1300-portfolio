@@ -12,7 +12,11 @@ interface ProjectCardProps {
 
 const ProjectCard = (props: ProjectCardProps) => {
   return (
-    <Stack direction={['column', 'column', 'row']} spacing='36px' align='center'>
+    <Stack
+      direction={['column', 'column', 'row']}
+      spacing='36px'
+      align='center'
+    >
       <Flex
         width='480px'
         justifyContent='center'
@@ -20,7 +24,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         <Image
           src={props.imgPath}
           maxWidth='400px'
-          maxHeight='400px'
+          maxHeight='320px'
           borderRadius='5px'
         />
       </Flex>

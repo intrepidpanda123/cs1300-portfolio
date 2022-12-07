@@ -22,7 +22,7 @@ function Home() {
       padding='128px 48px 80px'
     >
       <VStack
-        spacing='72px'
+        spacing='60px'
       >
         <HStack
           id='intro-section'
@@ -36,7 +36,7 @@ function Home() {
           />
           <VStack
             align='flex-start'
-            spacing='32px'
+            spacing='24px'
           >
             <VStack
               align='flex-start'
@@ -89,7 +89,7 @@ function Home() {
           </VStack>
         </HStack>
         <Divider borderColor='#AAAAAA'/>
-        <VStack id='portfolio-section' spacing='80px'>
+        <VStack id='portfolio-section' spacing='48px'>
           <Text fontSize='3xl'>
             Portfolio
           </Text>
@@ -102,7 +102,7 @@ function Home() {
           </VStack>
         </VStack>
         <Divider borderColor='#AAAAAA'/>
-        <VStack id='research-section' spacing='80px'>
+        <VStack id='research-section' spacing='48px'>
           <Text fontSize='3xl'>
             Research
           </Text>
