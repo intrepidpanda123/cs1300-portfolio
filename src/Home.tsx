@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 function Home() {
   const { state } = useLocation();
@@ -24,6 +25,12 @@ function Home() {
       <VStack
         spacing='60px'
       >
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.75 }}
+        >
         <HStack
           id='intro-section'
           spacing='60px'
@@ -88,11 +95,27 @@ function Home() {
             </HStack>
           </VStack>
         </HStack>
-        <Divider borderColor='#AAAAAA'/>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.75 }}
+          style={{ width: '100%' }}
+        >
+          <Divider borderColor='#AAAAAA'/>
+        </motion.div>
         <VStack id='portfolio-section' spacing='48px'>
-          <Text fontSize='3xl'>
-            Portfolio
-          </Text>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.75 }}
+          >
+            <Text fontSize='3xl'>
+              Portfolio
+            </Text>
+          </motion.div>
           <VStack
             spacing='76px'
           >
@@ -101,20 +124,42 @@ function Home() {
             <ProjectCard name='Prototyping a Note-Taking App' description='A brief description about iterative design' imgPath='/cs1300-portfolio/iterative-design-screenshot.png' linkTo='/iterative-design'/>
           </VStack>
         </VStack>
-        <Divider borderColor='#AAAAAA'/>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.75 }}
+          style={{ width: '100%' }}
+        >
+          <Divider borderColor='#AAAAAA'/>
+        </motion.div>
         <VStack id='research-section' spacing='48px'>
-          <Text fontSize='3xl'>
-            Research
-          </Text>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.75 }}
+          >
+            <Text fontSize='3xl'>
+              Research
+            </Text>
+          </motion.div>
           <VStack
             spacing='76px'
           >
             <ProjectCard name='Ordering at Ten One Tea House' description='A brief description about personas and storyboarding' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/personas-storyboarding'/>
           </VStack>
         </VStack>
-        <Text pt='144px'>
-          Copyright 2022 © Intrepid Panda
-        </Text>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.75 }}
+        >
+          <Text pt='144px'>
+            Copyright 2022 © Intrepid Panda
+          </Text>
+        </motion.div>
       </VStack>
     </Center>
   );

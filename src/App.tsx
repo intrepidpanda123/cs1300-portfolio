@@ -14,7 +14,7 @@ export default function App() {
         width='100%'
         maxWidth='1080px'
       >
-        <NavBar />
+        <NavBar/>
         <AppRouter />
       </Box>
     </Box>

@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { MutableRefObject, useEffect, useState } from 'react';
 import { Flex, HStack, Text } from '@chakra-ui/react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface TextLinkProps {
   to: string,
@@ -64,45 +65,53 @@ const NavBar = () => {
   const [ currentActive, setCurrentActive ] = useState(0);
 
   return (
-    <Flex
-      height='80px'
-      align='center'
-      justify='space-between'
-      padding='0px 36px'
-      position='fixed'
-      width='100%'
-      maxWidth='1080px'
-      bgGradient='linear(to-b, #FFFFFF, #FFFFFFFF, #FFFFFFEE, #FFFFFFDD, #FFFFFFAA, #FFFFFF00)'
-      zIndex='1'
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: '10000px' }}
+      transition={{ duration: 0.75 }}
+      style={{ width: '100%' }}
     >
-      <TextLink
-        base
-        priority={0}
-        currentActive={currentActive}
-        to='intro-section'
-        label='Intrepid Panda'
-        ariaLabel='link to homepage'
-        setCurrentActive={setCurrentActive}
-      />
-      <HStack spacing='48px'>
+      <Flex
+        height='80px'
+        align='center'
+        justify='space-between'
+        padding='0px 36px'
+        position='fixed'
+        width='100%'
+        maxWidth='1080px'
+        bgGradient='linear(to-b, #FFFFFF, #FFFFFFFF, #FFFFFFEE, #FFFFFFDD, #FFFFFFAA, #FFFFFF00)'
+        zIndex='1'
+      >
         <TextLink
-          priority={1}
+          base
+          priority={0}
           currentActive={currentActive}
-          to='portfolio-section'
-          label='Portfolio'
-          ariaLabel='link to portfolio'
+          to='intro-section'
+          label='Intrepid Panda'
+          ariaLabel='link to homepage'
           setCurrentActive={setCurrentActive}
         />
-        <TextLink
-          priority={2}
-          currentActive={currentActive}
-          to='research-section'
-          label='Research'
-          ariaLabel='link to research'
-          setCurrentActive={setCurrentActive}
-        />
-      </HStack>
-    </Flex>
+        <HStack spacing='48px'>
+          <TextLink
+            priority={1}
+            currentActive={currentActive}
+            to='portfolio-section'
+            label='Portfolio'
+            ariaLabel='link to portfolio'
+            setCurrentActive={setCurrentActive}
+          />
+          <TextLink
+            priority={2}
+            currentActive={currentActive}
+            to='research-section'
+            label='Research'
+            ariaLabel='link to research'
+            setCurrentActive={setCurrentActive}
+          />
+        </HStack>
+      </Flex>
+    </motion.div>
   );
 }
 
