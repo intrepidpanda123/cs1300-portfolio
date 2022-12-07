@@ -1,16 +1,17 @@
-import { Button, Center, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
+import { Button, Center, Divider, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 function Home() {
   return (
     <Center
-      padding='128px 48px 0px'
+      padding='128px 48px 80px'
     >
       <VStack
         spacing='108px'
       >
         <HStack
+          id='intro-section'
           spacing='60px'
         >
           <Image
@@ -20,7 +21,6 @@ function Home() {
             alt='panda image'
           />
           <VStack
-            className='intro'
             align='flex-start'
             spacing='40px'
           >
@@ -74,6 +74,7 @@ function Home() {
             </HStack>
           </VStack>
         </HStack>
+        <Divider borderColor='#AAAAAA'/>
         <VStack id='portfolio-section' spacing='80px'>
           <Text fontSize='3xl'>
             Portfolio
@@ -86,6 +87,7 @@ function Home() {
             <ProjectCard name='Prototyping a Note-Taking App' description='A brief description about iterative design' imgPath='/cs1300-portfolio/iterative-design-screenshot.png' linkTo='/uiux/iterative-design'/>
           </VStack>
         </VStack>
+        <Divider borderColor='#AAAAAA'/>
         <VStack id='research-section' spacing='80px'>
           <Text fontSize='3xl'>
             Research
@@ -96,6 +98,9 @@ function Home() {
             <ProjectCard name='Ordering at Ten One Tea House' description='A brief description about personas and storyboarding' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/uiux/personas-storyboarding'/>
           </VStack>
         </VStack>
+        <Text pt='144px'>
+          Copyright 2022 © Intrepid Panda
+        </Text>
       </VStack>
     </Center>
   );
