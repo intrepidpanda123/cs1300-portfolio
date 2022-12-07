@@ -13,8 +13,8 @@ function AppRouter() {
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/work" element={<Work />}/>
-        <Route path="/uiux/personas-storyboarding" element={<PersonasAndStoryboarding />}/>
-        <Route path="/uiux/responsive-redesign" element={<ResponsiveRedesign />}/>
+        <Route path="/personas-storyboarding" element={<PersonasAndStoryboarding />}/>
+        <Route path="/responsive-redesign" element={<ResponsiveRedesign />}/>
       </Routes>
     </Box>
   );

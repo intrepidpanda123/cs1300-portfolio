@@ -4,7 +4,8 @@ import { useEffect } from "react";
 const ResponsiveRedesign = () => {
   useEffect(() => {
     document.title = 'Responsive Redesign';
-  });
+    window.scrollTo(0, 0);
+  }, []);
 
   const styles = {
     container: {

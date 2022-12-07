@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Flex, HStack, Text } from '@chakra-ui/react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface TextLinkProps {
   to: string,
@@ -12,16 +13,28 @@ interface TextLinkProps {
 }
 
 const TextLink = (props: TextLinkProps) => {
+  const [ active, setActive ] = useState(true);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setActive(location.pathname === '/');
+  }, [ location.pathname ]);
+
   const scrollIn = () => {
+    navigate('/', { state: { id: props.to } });
     const section = document.getElementById(props.to)!;
-    window.scrollTo(0, section.offsetTop - 100);
+    if (section && section.offsetTop) {
+      window.scrollTo({ top: section.offsetTop - 100, left: 0, behavior: 'smooth' });
+    }
   }
 
   const updateActive = () => {
     const section = document.getElementById(props.to)!;
     const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-    if ((props.base || section.offsetTop < scroll + 108) && props.priority > props.currentActive) {
+    if (((props.base && section) || (section && section.offsetTop < scroll + 108))
+        && props.priority >= props.currentActive) {
       props.setCurrentActive(props.priority);
     }
   }
@@ -39,7 +52,7 @@ const TextLink = (props: TextLinkProps) => {
       onClick={scrollIn}
       aria-label={props.ariaLabel}
       _hover={{ color: '#6BBF59', cursor: 'pointer' }}
-      color={props.priority === props.currentActive ? '#6BBF59' : 'black'}
+      color={active && props.priority === props.currentActive ? '#6BBF59' : 'black'}
     >
       {props.label}
     </Text>
@@ -48,17 +61,6 @@ const TextLink = (props: TextLinkProps) => {
 
 const NavBar = () => {
   const [ currentActive, setCurrentActive ] = useState(0);
-
-  const resetCurrentActive = () => {
-    setCurrentActive(0);
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', resetCurrentActive, true)
-    return () => {
-      window.removeEventListener('scroll', resetCurrentActive, true)
-    }
-  }, []);
 
   return (
     <Flex

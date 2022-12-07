@@ -1,6 +1,6 @@
 import { Button, Flex, Image, Text, Stack, VStack } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { Link as ReachLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   name: string,
@@ -35,7 +35,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         <Text>
           {props.description}
         </Text>
-        <Button as={ReachLink} to={props.linkTo} variant='link' _hover={{ color: '#6BBF59' }}>
+        <Button as={Link} to={props.linkTo} variant='link' _hover={{ color: '#6BBF59' }}>
           More <ArrowForwardIcon mx='4px'/>
         </Button>
       </VStack>

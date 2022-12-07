@@ -41,7 +41,8 @@ const styles = {
 const PersonasAndStoryboarding = () => {
   useEffect(() => {
     document.title = 'Personas and Storyboarding';
-  });
+    window.scrollTo(0, 0);
+  }, []);
 
   const ryanPersona = {
     thinks: [

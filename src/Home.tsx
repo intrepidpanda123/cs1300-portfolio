@@ -1,8 +1,22 @@
 import { Button, Center, Divider, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Home() {
+  const { state } = useLocation();
+
+  useEffect(() => {
+    document.title = 'Intrepid Panda';
+
+    if (state && state.id) {
+      const section = document.getElementById(state.id)!;
+      window.scrollTo({ top: section.offsetTop - 100, left: 0, behavior: 'auto' });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Center
       padding='128px 48px 80px'
@@ -82,9 +96,9 @@ function Home() {
           <VStack
             spacing='128px'
           >
-            <ProjectCard name='Redesigning Fandom' description='A brief description about responsive redesign' imgPath='/cs1300-portfolio/responsive-webpage.png' linkTo='/uiux/responsive-redesign'/>
+            <ProjectCard name='Redesigning Fandom' description='A brief description about responsive redesign' imgPath='/cs1300-portfolio/responsive-webpage.png' linkTo='/responsive-redesign'/>
 
-            <ProjectCard name='Prototyping a Note-Taking App' description='A brief description about iterative design' imgPath='/cs1300-portfolio/iterative-design-screenshot.png' linkTo='/uiux/iterative-design'/>
+            <ProjectCard name='Prototyping a Note-Taking App' description='A brief description about iterative design' imgPath='/cs1300-portfolio/iterative-design-screenshot.png' linkTo='/iterative-design'/>
           </VStack>
         </VStack>
         <Divider borderColor='#AAAAAA'/>
@@ -95,7 +109,7 @@ function Home() {
           <VStack
             spacing='128px'
           >
-            <ProjectCard name='Ordering at Ten One Tea House' description='A brief description about personas and storyboarding' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/uiux/personas-storyboarding'/>
+            <ProjectCard name='Ordering at Ten One Tea House' description='A brief description about personas and storyboarding' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/personas-storyboarding'/>
           </VStack>
         </VStack>
         <Text pt='144px'>
