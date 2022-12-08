@@ -4,7 +4,8 @@ import { useEffect } from "react";
 
 const IterativeDesign = () => {
   useEffect(() => {
-    document.title='Iterative Design'
+    document.title='Iterative Design';
+    window.scrollTo(0, 0);
   }, []);
 
   return(

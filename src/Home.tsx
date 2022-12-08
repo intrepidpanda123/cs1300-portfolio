@@ -26,7 +26,7 @@ function Home() {
       transition={{ duration: 0.5 }}
     >
       <Center
-        padding='128px 48px 80px'
+        padding='60px 48px 36px'
       >
         <VStack
           spacing='60px'
