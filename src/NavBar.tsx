@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Flex, HStack, Text } from '@chakra-ui/react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -75,7 +75,7 @@ const NavBar = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: '10000px' }}
       transition={{ duration: 0.75 }}
-      style={{ width: '100%' }}
+      style={{ width: '1080px', maxWidth: '100vw' }}
     >
       <Flex
         height='80px'
@@ -83,8 +83,8 @@ const NavBar = () => {
         justify='space-between'
         padding='0px 36px'
         position='fixed'
-        width='100%'
-        maxWidth='1080px'
+        width='1080px'
+        maxWidth='100vw'
         bgGradient='linear(to-b, #FFFFFF, #FFFFFFFF, #FFFFFFEE, #FFFFFFDD, #FFFFFFAA, #FFFFFF00)'
         zIndex='1'
       >

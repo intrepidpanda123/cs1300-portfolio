@@ -6,12 +6,13 @@ import PersonasAndStoryboarding from './uiux-coursework/PersonasAndStoryboarding
 import ResponsiveRedesign from './uiux-coursework/ResponsiveRedesign';
 import { Box } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
+import IterativeDesign from './portfolio-items/IterativeDesign';
 
 function AppRouter() {
   const location = useLocation();
 
   return (
-    <Box padding='24px'>
+    <Box padding='80px 24px'>
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />}/>
@@ -19,6 +20,7 @@ function AppRouter() {
           <Route path="/work" element={<Work />}/>
           <Route path="/personas-storyboarding" element={<PersonasAndStoryboarding />}/>
           <Route path="/responsive-redesign" element={<ResponsiveRedesign />}/>
+          <Route path="/iterative-design" element={<IterativeDesign />}/>
         </Routes>
       </AnimatePresence>
     </Box>
