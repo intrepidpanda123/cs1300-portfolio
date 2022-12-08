@@ -5,7 +5,6 @@ import { useEffect } from "react";
 const IterativeDesign = () => {
   useEffect(() => {
     document.title='Iterative Design'
-    window.scrollTo(0,0);
   }, []);
 
   return(
@@ -18,21 +17,20 @@ const IterativeDesign = () => {
       <Center>
         <VStack
           paddingTop='72px'
-          width='840px'
+          width='700px'
           maxWidth='100%'
           spacing='60px'
         >
-          <Text fontSize='4xl'>
+          <Text fontSize='4xl' width='100%'>
             Prototyping a Note-Taking App
           </Text>
 
           <VStack
             id='introduction-section'
             width='100%'
-            align='flex-start'
             spacing='24px'
           >
-            <Text fontSize='3xl'>
+            <Text fontSize='3xl' width='100%'>
               Introduction
             </Text>
             <Text>
@@ -44,16 +42,15 @@ const IterativeDesign = () => {
           <VStack
             id='context-section'
             width='100%'
-            align='flex-start'
             spacing='24px'
           >
-            <Text fontSize='3xl'>
+            <Text fontSize='3xl' width='100%'>
               Problem
             </Text>
             <Text>
               We attempted to solve the same problem that Heptabase's developers were trying to solve, based only on their description on <Link isExternal color='#6BBF59' href='https://www.ycombinator.com/companies/heptabase'>YCombinator</Link>. This left us with three success criteria:
             </Text>
-            <OrderedList pl='40px' spacing='12px'>
+            <OrderedList pl='40px' spacing='12px' width='100%'>
               <ListItem>Our solution must involve putting notes on whiteboards;</ListItem>
               <ListItem>It must allow users to search through their notes to support visual recall; and</ListItem>
               <ListItem>It should ultimately support a user's ability to learn complex topics.</ListItem>
@@ -63,10 +60,9 @@ const IterativeDesign = () => {
           <VStack
             id='research-section'
             width='100%'
-            align='flex-start'
             spacing='24px'
           >
-            <Text fontSize='3xl'>
+            <Text fontSize='3xl' width='100%'>
               Research
             </Text>
             <Text>
@@ -82,10 +78,18 @@ const IterativeDesign = () => {
               <ListItem>We laid out our file views in different ways (in grids/lists, with/without thumbnails, etc.).</ListItem>
             </UnorderedList>
             <HStack>
-              <Image src='/cs1300-portfolio/sketch-1.png' maxWidth='200px'/>
-              <Image src='/cs1300-portfolio/sketch-2.png' maxWidth='200px'/>
-              <Image src='/cs1300-portfolio/sketch-3.png' maxWidth='200px'/>
-              <Image src='/cs1300-portfolio/sketch-4.png' maxWidth='200px'/>
+              <Link href='/cs1300-portfolio/sketch-1.png'>
+                <Image src='/cs1300-portfolio/sketch-1.png' maxWidth='180px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/sketch-2.png'>
+                <Image src='/cs1300-portfolio/sketch-2.png' maxWidth='180px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/sketch-3.png'>
+                <Image src='/cs1300-portfolio/sketch-3.png' maxWidth='180px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/sketch-4.png'>
+                <Image src='/cs1300-portfolio/sketch-4.png' maxWidth='180px'/>
+              </Link>
             </HStack>
             <Text>
               From here, we discussed what which features and layout characteristics were most to include in our app, and solicited feedback from others experienced in using note-taking software. This allowed us to distill our sketches into the following key ideas:
@@ -107,10 +111,9 @@ const IterativeDesign = () => {
           <VStack
             id='design-section'
             width='100%'
-            align='flex-start'
             spacing='24px'
           >
-            <Text fontSize='3xl'>
+            <Text fontSize='3xl' width='100%'>
               Design Iterations
             </Text>
 
@@ -119,11 +122,21 @@ const IterativeDesign = () => {
             </Text>
 
             <HStack>
-              <Image src='/cs1300-portfolio/wireframe-login.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/wireframe-main.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/wireframe-files.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/wireframe-search.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/wireframe-napkin.png' maxWidth='160px'/>
+              <Link href='/cs1300-portfolio/wireframe-login.png' >
+                <Image src='/cs1300-portfolio/wireframe-login.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/wireframe-main.png' >
+                <Image src='/cs1300-portfolio/wireframe-main.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/wireframe-files.png' >
+                <Image src='/cs1300-portfolio/wireframe-files.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/wireframe-search.png' >
+                <Image src='/cs1300-portfolio/wireframe-search.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/wireframe-napkin.png' >
+              <Image src='/cs1300-portfolio/wireframe-napkin.png' maxWidth='140px'/>
+              </Link>
             </HStack>
 
             <Text>
@@ -131,11 +144,21 @@ const IterativeDesign = () => {
             </Text>
 
             <HStack>
-              <Image src='/cs1300-portfolio/hi-fi-login.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/hi-fi-whiteboard.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/hi-fi-edit.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/hi-fi-search.png' maxWidth='160px'/>
-              <Image src='/cs1300-portfolio/hi-fi-snippet.png' maxWidth='160px'/>
+              <Link href='/cs1300-portfolio/hi-fi-login.png' >
+                <Image src='/cs1300-portfolio/hi-fi-login.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/hi-fi-whiteboard.png' >
+                <Image src='/cs1300-portfolio/hi-fi-whiteboard.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/hi-fi-edit.png' >
+                <Image src='/cs1300-portfolio/hi-fi-edit.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/hi-fi-search.png' >
+                <Image src='/cs1300-portfolio/hi-fi-search.png' maxWidth='140px'/>
+              </Link>
+              <Link href='/cs1300-portfolio/hi-fi-snippet.png' >
+                <Image src='/cs1300-portfolio/hi-fi-snippet.png' maxWidth='140px'/>
+              </Link>
             </HStack>
 
             <Text>
@@ -170,10 +193,9 @@ const IterativeDesign = () => {
           <VStack
             id='conclusion-section'
             width='100%'
-            align='flex-start'
             spacing='24px'
           >
-            <Text fontSize='3xl'>
+            <Text fontSize='3xl' width='100%'>
               Conclusion
             </Text>
 
