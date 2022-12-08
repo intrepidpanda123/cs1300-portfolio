@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const IterativeDesign = () => {
   useEffect(() => {
-    document.title='Iterative Design';
+    document.title='Iterative Design - Intrepid Panda';
     window.scrollTo(0, 0);
   }, []);
 
@@ -41,7 +41,7 @@ const IterativeDesign = () => {
 
 
           <VStack
-            id='context-section'
+            id='project-context-section'
             width='100%'
             spacing='24px'
           >
@@ -59,7 +59,7 @@ const IterativeDesign = () => {
           </VStack>
 
           <VStack
-            id='research-section'
+            id='project-research-section'
             width='100%'
             spacing='24px'
           >
@@ -79,16 +79,16 @@ const IterativeDesign = () => {
               <ListItem>We laid out our file views in different ways (in grids/lists, with/without thumbnails, etc.).</ListItem>
             </UnorderedList>
             <HStack>
-              <Link href='/cs1300-portfolio/sketch-1.png'>
+              <Link isExternal href='/cs1300-portfolio/sketch-1.png'>
                 <Image src='/cs1300-portfolio/sketch-1.png' maxWidth='180px'/>
               </Link>
-              <Link href='/cs1300-portfolio/sketch-2.png'>
+              <Link isExternal href='/cs1300-portfolio/sketch-2.png'>
                 <Image src='/cs1300-portfolio/sketch-2.png' maxWidth='180px'/>
               </Link>
-              <Link href='/cs1300-portfolio/sketch-3.png'>
+              <Link isExternal href='/cs1300-portfolio/sketch-3.png'>
                 <Image src='/cs1300-portfolio/sketch-3.png' maxWidth='180px'/>
               </Link>
-              <Link href='/cs1300-portfolio/sketch-4.png'>
+              <Link isExternal href='/cs1300-portfolio/sketch-4.png'>
                 <Image src='/cs1300-portfolio/sketch-4.png' maxWidth='180px'/>
               </Link>
             </HStack>
@@ -110,7 +110,7 @@ const IterativeDesign = () => {
           </VStack>
 
           <VStack
-            id='design-section'
+            id='project-design-section'
             width='100%'
             spacing='24px'
           >
@@ -123,19 +123,19 @@ const IterativeDesign = () => {
             </Text>
 
             <HStack>
-              <Link href='/cs1300-portfolio/wireframe-login.png' >
+              <Link isExternal href='/cs1300-portfolio/wireframe-login.png' >
                 <Image src='/cs1300-portfolio/wireframe-login.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/wireframe-main.png' >
+              <Link isExternal href='/cs1300-portfolio/wireframe-main.png' >
                 <Image src='/cs1300-portfolio/wireframe-main.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/wireframe-files.png' >
+              <Link isExternal href='/cs1300-portfolio/wireframe-files.png' >
                 <Image src='/cs1300-portfolio/wireframe-files.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/wireframe-search.png' >
+              <Link isExternal href='/cs1300-portfolio/wireframe-search.png' >
                 <Image src='/cs1300-portfolio/wireframe-search.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/wireframe-napkin.png' >
+              <Link isExternal href='/cs1300-portfolio/wireframe-napkin.png' >
               <Image src='/cs1300-portfolio/wireframe-napkin.png' maxWidth='140px'/>
               </Link>
             </HStack>
@@ -145,19 +145,19 @@ const IterativeDesign = () => {
             </Text>
 
             <HStack>
-              <Link href='/cs1300-portfolio/hi-fi-login.png' >
+              <Link isExternal href='/cs1300-portfolio/hi-fi-login.png' >
                 <Image src='/cs1300-portfolio/hi-fi-login.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/hi-fi-whiteboard.png' >
+              <Link isExternal href='/cs1300-portfolio/hi-fi-whiteboard.png' >
                 <Image src='/cs1300-portfolio/hi-fi-whiteboard.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/hi-fi-edit.png' >
+              <Link isExternal href='/cs1300-portfolio/hi-fi-edit.png' >
                 <Image src='/cs1300-portfolio/hi-fi-edit.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/hi-fi-search.png' >
+              <Link isExternal href='/cs1300-portfolio/hi-fi-search.png' >
                 <Image src='/cs1300-portfolio/hi-fi-search.png' maxWidth='140px'/>
               </Link>
-              <Link href='/cs1300-portfolio/hi-fi-snippet.png' >
+              <Link isExternal href='/cs1300-portfolio/hi-fi-snippet.png' >
                 <Image src='/cs1300-portfolio/hi-fi-snippet.png' maxWidth='140px'/>
               </Link>
             </HStack>
@@ -192,7 +192,7 @@ const IterativeDesign = () => {
           </VStack>
 
           <VStack
-            id='conclusion-section'
+            id='project-conclusion-section'
             width='100%'
             spacing='24px'
           >

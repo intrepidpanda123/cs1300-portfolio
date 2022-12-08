@@ -7,6 +7,7 @@ import ResponsiveRedesign from './uiux-coursework/ResponsiveRedesign';
 import { Box } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
 import IterativeDesign from './portfolio-items/IterativeDesign';
+import EyeTracking from './portfolio-items/EyeTracking';
 
 function AppRouter() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function AppRouter() {
           <Route path="/personas-storyboarding" element={<PersonasAndStoryboarding />}/>
           <Route path="/responsive-redesign" element={<ResponsiveRedesign />}/>
           <Route path="/iterative-design" element={<IterativeDesign />}/>
+          <Route path="/eye-tracking" element={<EyeTracking />}/>
         </Routes>
       </AnimatePresence>
     </Box>

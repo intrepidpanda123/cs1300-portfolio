@@ -58,9 +58,14 @@ function Home() {
                 <Text fontSize='4xl'>
                   This is Intrepid Panda
                 </Text>
-                <Text>
-                  I am a web and UX designer focused on making simple yet effective interfaces
-                </Text>
+                <div>
+                  <Text>
+                    I am a web and UX designer focused on making simple yet effective interfaces.
+                  </Text>
+                  <Text>
+                    I also like eating chutes and leaves.
+                  </Text>
+                </div>
               </VStack>
               <HStack spacing='24px'>
                 <Button
@@ -119,7 +124,7 @@ function Home() {
               transition={{ duration: 0.5 }}
             >
               <Text fontSize='3xl'>
-                Portfolio
+                Work
               </Text>
             </motion.div>
             <VStack
@@ -154,7 +159,7 @@ function Home() {
               spacing='76px'
             >
               <ProjectCard name='Ten One Tea House Ordering' description='Understanding the Ten One Snackpass kiosk ordering experience through the eyes of its users' imgPath='/cs1300-portfolio/tenone.jpg' linkTo='/personas-storyboarding'/>
-              <ProjectCard name='Eye Tracking for a Bakery Website' description='Investigating the effects of various page layouts on user attention and impressions' imgPath='/cs1300-portfolio/heatmap1.png' linkTo='/eyetracking'/>
+              <ProjectCard name='Eye Tracking for a Bakery Website' description='Investigating the effects of various page layouts on user attention and impressions' imgPath='/cs1300-portfolio/heatmap1.png' linkTo='/eye-tracking'/>
             </VStack>
           </VStack>
           <motion.div

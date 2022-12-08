@@ -59,7 +59,7 @@ const TextLink = (props: TextLinkProps) => {
       onClick={scrollIn}
       aria-label={props.ariaLabel}
       _hover={{ color: '#6BBF59', cursor: 'pointer' }}
-      color={active && props.priority === props.currentActive ? '#6BBF59' : 'black'}
+      color={active && (props.base || props.priority === props.currentActive) ? '#6BBF59' : 'black'}
     >
       {props.label}
     </Text>
@@ -102,8 +102,8 @@ const NavBar = () => {
             priority={1}
             currentActive={currentActive}
             to='portfolio-section'
-            label='Portfolio'
-            ariaLabel='link to portfolio'
+            label='Work'
+            ariaLabel='link to work'
             setCurrentActive={setCurrentActive}
           />
           <TextLink
