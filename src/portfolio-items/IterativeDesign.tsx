@@ -197,7 +197,7 @@ const IterativeDesign = () => {
             spacing='24px'
           >
             <Text fontSize='3xl' width='100%'>
-              Conclusion
+              Conclusions
             </Text>
 
             <Text>

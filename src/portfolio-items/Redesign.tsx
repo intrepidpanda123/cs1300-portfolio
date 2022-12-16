@@ -1,4 +1,4 @@
-import { Center, VStack, OrderedList, ListItem, UnorderedList, HStack, Text, Link, Image } from "@chakra-ui/react";
+import { Center, VStack, OrderedList, ListItem, HStack, Text, Link, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
@@ -67,7 +67,7 @@ const Redesign = () => {
               First, I worked on identifying problems with the usability, learnability, and memorability of the original webpage.
             </Text>
 
-            <Text fontSize='1xl' width='100%'>
+            <Text fontSize='xl' width='100%'>
               Usability Issues:
             </Text>
             <OrderedList spacing='12px' width='100%' pl='40px'>
@@ -77,7 +77,7 @@ const Redesign = () => {
               <ListItem> The table of contents is extremely long and delays the main content of the article </ListItem>
             </OrderedList>
 
-            <Text fontSize='1xl' width='100%'>
+            <Text fontSize='xl' width='100%'>
               Learnability Issues:
             </Text>
             <OrderedList spacing='12px' width='100%' pl='40px' start={5}>
@@ -85,7 +85,7 @@ const Redesign = () => {
               <ListItem> Closing the intrusive video and banner advertisements is unintuitive, since the close button can be sometimes hard to find </ListItem>
             </OrderedList>
 
-            <Text fontSize='1xl' width='100%'>
+            <Text fontSize='xl' width='100%'>
               Memorability Issues:
             </Text>
             <OrderedList spacing='12px' width='100%' pl='40px' start={7}>

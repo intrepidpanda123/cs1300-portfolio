@@ -3,12 +3,12 @@ import Home from './Home';
 import About from './About';
 import Work from './Work';
 import PersonasAndStoryboarding from './uiux-coursework/PersonasAndStoryboarding';
-import ResponsiveRedesign from './uiux-coursework/ResponsiveRedesign';
 import { Box } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
 import IterativeDesign from './portfolio-items/IterativeDesign';
 import EyeTracking from './portfolio-items/EyeTracking';
 import Redesign from './portfolio-items/Redesign';
+import Personas from './portfolio-items/Personas';
 
 function AppRouter() {
   const location = useLocation();
@@ -20,7 +20,7 @@ function AppRouter() {
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/work" element={<Work />}/>
-          <Route path="/personas-storyboarding" element={<PersonasAndStoryboarding />}/>
+          <Route path="/personas-storyboarding" element={<Personas />}/>
           <Route path="/responsive-redesign" element={<Redesign />}/>
           <Route path="/iterative-design" element={<IterativeDesign />}/>
           <Route path="/eye-tracking" element={<EyeTracking />}/>

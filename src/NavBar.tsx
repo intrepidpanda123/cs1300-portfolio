@@ -86,7 +86,7 @@ const NavBar = () => {
         width='1080px'
         maxWidth='100vw'
         bgGradient='linear(to-b, #FFFFFF, #FFFFFFFF, #FFFFFFEE, #FFFFFFDD, #FFFFFFAA, #FFFFFF00)'
-        zIndex='1'
+        zIndex='3'
       >
         <TextLink
           base

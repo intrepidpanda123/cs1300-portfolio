@@ -1,4 +1,4 @@
-import { Center, VStack, OrderedList, ListItem, UnorderedList, HStack, Text, Link, Image } from "@chakra-ui/react";
+import { Center, VStack, OrderedList, ListItem, HStack, Text, Link, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
